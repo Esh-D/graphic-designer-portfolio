@@ -5,16 +5,18 @@ import Footer from './components/Footer/Footer'
 import Hero from './components/Hero/Hero'
 import Navbar from './components/Navbar/Navbar'
 import Projects from './components/Projects/Projects'
+import Home from './components/Home/Home'
+import { Routes, Route } from "react-router";
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
+    <div className="overflow-hidden">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   )
 }

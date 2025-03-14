@@ -1,3 +1,27 @@
+.nav-heading {
+    font-size: x-large;
+}
+
+.nav-list {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.nav-item {
+    /* margin: 30px; */
+    color: black;
+}
+
+.nav-item:hover {
+    color: grey;
+}
+
+/* ---- */
+
 #nav-bar {
     top: 0;
     position: fixed;
@@ -8,18 +32,6 @@
     align-items: center;
     justify-content: space-between;
     background-color: ghostwhite;
-}
-
-.nav-list {
-    list-style-type: none;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.nav-item {
-    margin: 30px;
 }
 
 .name {

@@ -1,0 +1,11 @@
+.intro {
+    height: auto;
+    width: 50%;
+    overflow: hidden;
+    float: right;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
