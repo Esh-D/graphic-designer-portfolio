@@ -1,3 +1,5 @@
+import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
 import './Projects.css'
 
 function Projects() {
@@ -20,17 +22,21 @@ function Projects() {
     ];
 
     return (
-        <section className="min-h-screen p-8 flex flex-col justify-around">
-            <h1 className="text-3xl text-stone-600 font-bold text-center mb-16 mt-14">Portfolio</h1>
-            <div className="grid md:grid-cols-6 gap-6">
-                {projects.map((project) => (
-                <div key={project.id} className="rounded-sm hover:shadow-xl transition">
-                    <img src={project.image} alt={project.title} className="rounded-lg w-full h-64 object-cover cursor-pointer" />
-                    {/* <h2 className="mt-2 text-lg font-semibold">{project.title}</h2> */}
-                </div>
-                ))}
-            </div>
-        </section>
+        <>
+            <Navbar />
+                <section className="min-h-screen p-8 flex flex-col justify-around overflow-hidden">
+                    <h1 className="text-3xl text-stone-600 font-bold text-center mb-16 mt-14">Portfolio</h1>
+                    <div className="grid md:grid-cols-6 gap-6">
+                        {projects.map((project) => (
+                        <div key={project.id} className="rounded-sm hover:shadow-xl transition">
+                            <img src={project.image} alt={project.title} className="rounded-lg w-full h-64 object-cover cursor-pointer" />
+                            {/* <h2 className="mt-2 text-lg font-semibold">{project.title}</h2> */}
+                        </div>
+                        ))}
+                    </div>
+                </section>
+            <Footer />
+        </>
     )
 }
 
